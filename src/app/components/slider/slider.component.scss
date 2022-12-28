@@ -1,0 +1,34 @@
+.carousel-container{
+  position: relative;
+  margin: auto;
+  text-align: center;
+  max-width: 700px;
+}
+.carousel-container img {
+  display: none;
+}
+.carousel-container img.image-active{
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+.btn-carousel-container{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 150px;
+  gap: 15px;
+  .btn-carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+@media (max-width: 340px){
+
+    .carousel-container img.image-active{
+      display: block;
+      margin-right: 20px;
+    }
+
+}

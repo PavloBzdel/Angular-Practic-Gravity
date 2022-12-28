@@ -1,0 +1,33 @@
+<div *ngIf="profile && profile.length > 0" class="carousel-container">
+  <div class="card" *ngFor="let item of profile; let i = index" [ngClass]="{'image-active': selectedIndex === i}">
+    <div class="card-container">
+      <div class="card-content">
+        <div class="title">{{item.title}}</div>
+        <div class="name">{{item.name}}</div>
+        <div class="profession">{{item.profession}}</div>
+      </div>
+      <div class="card-images">
+        <img [src]="item.img">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="btn-carousel-container">
+  <div class="btn-carousel btn-prev">
+    <div class="icon-carousel" (click)="onPrevClick()">
+      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="50" height="50" fill="#C4C4C4" />
+        <path d="M27.5 17.5L20 25.3125L27.5 33.125" stroke="white" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="btn-carousel btn-next">
+    <div class="icon-carousel" (click)="onNextClick()">
+      <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="50" height="50" fill="#C4C4C4" />
+        <path d="M22.5 33.75L30 25.9375L22.5 18.125" stroke="white" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+</div>
